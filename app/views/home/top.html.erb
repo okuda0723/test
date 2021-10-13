@@ -1,0 +1,32 @@
+<div　class="top-main">
+    <div class="top-image">
+        <img src="/cake4.jpg" alt="写真" width="670" height="230">
+    </div>
+</div>
+
+<!-- 検索フォーム　-->
+
+<div class="top-search">
+  <%= form_tag(posts_search_path,:method => 'get') do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag '検索', :title => nil %>
+  <% end %>
+</div>
+
+
+<!-- 最新画像6つ　-->
+<div class="container">
+  <div class="main-images">
+    <% @cookings.first(6).each do |cooking| %>
+        <%= link_to image_tag(cooking.image_1.url, class:"list-image"), "/posts/#{cooking.id}" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+    <div class="btn">
+        <%= link_to("もっと見る","/posts/list") %>
+    </div>
+</div>
+

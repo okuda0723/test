@@ -1,0 +1,328 @@
+/* all-----------------------------------*/
+.error-message{
+    margin-top: 40px;
+    margin-bottom: -40px;
+    padding:1px 0;
+    background-color: rgb(255, 87, 87);
+    color: white;
+}
+
+.error-message ul{
+    padding-left: 8px;
+}
+
+/* posts/list-----------------------------------*/
+.search{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.list-images{
+    margin-top: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 13px;
+}
+
+.list-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+    margin-bottom: -1px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+
+/* posts/post-----------------------------------*/
+ul{
+    list-style: none;
+}
+
+.flash{
+    margin-top: 40px;
+    margin-bottom: -40px;
+    background-color: rgb(255, 87, 87);
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+.posts-image{
+    width: 100%;
+    height: 415px;
+    max-width: 150px;
+    position: relative;
+}
+
+.posts-image::before{
+    display: block;
+    padding-top:100%;
+}
+
+.posts-image img{
+    width: 373px;
+    height: 373px;
+    position: absolute;
+    top:40px;
+    object-fit: cover;
+    border: 1px solid black;
+    text-align: center;
+    position: absolute;
+}
+
+.container{
+    margin: 0 10px 0 10px;
+}
+
+.icon-container{
+    margin-top: -8px;
+}
+
+.twitter{
+    margin-right: 5px;
+}
+
+.line{
+    margin-right: 5px;
+}
+
+.posts-container{
+    border-bottom: 1px dotted black;
+    padding-bottom: 18px;
+}
+
+.posts-title{
+    font-size: 20px;
+}
+
+.created_date{
+    font-size: 14px;
+    margin-top: 3px;
+    height: 20px;
+}
+
+.tag{
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 10px;
+    padding:4px;
+    color: rgb(116, 116, 116);
+    background-color: rgb(219, 219, 218);
+}
+
+.rating-name{
+    font-size: 15px;
+    float: left;
+}
+
+.stars{
+    padding-top: -7px;
+    display: flex;
+    height: 50px;
+}
+
+.star{
+    color: #f8c601;
+    font-size: 25px;
+    margin-top: 0px;
+    padding-top: 8px;
+}
+
+.comment-container{
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.comment{
+    padding:10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 12px;
+    overflow-wrap: break-word;
+}
+
+/*ingredient*/
+
+.ingredient-container {
+    margin-bottom:30px;
+}
+
+.inguredient-container p{
+    font-size: 18px;
+}
+
+.ingredient{
+    margin-bottom: 10px;
+    margin-top: -10px;
+    padding-top: 10px;
+    background-color:rgb(238, 238, 238);
+}
+
+.ingredient-wrapper{
+    border-bottom: 1px solid rgb(122, 122, 122);
+    margin-bottom: 10px;
+}
+
+.ingredient span{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* direction*/
+.direction-container {
+    margin-bottom:30px;
+}
+
+.direction-container p{
+    font-size: 18px;
+}
+
+.direction{
+    margin-bottom: 10px;
+    margin-top: -10px;
+    background-color:rgb(238, 238, 238);
+    padding-top: 10px;
+}
+
+.direction-wrapper{
+    border-bottom: 1px solid rgb(122, 122, 122);
+    margin-bottom: 10px;
+}
+
+.direction span{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.icon-container{
+    float: right;
+}
+
+.sns-icon{
+    float: right;
+    width: 8%;
+    height: 8%;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+
+.edit-btn{
+    margin-right: 10px;
+}
+
+
+/* posts/new-----------------------------------*/
+.image-select{
+    margin-top: 25px;
+}
+
+.item-container{
+    margin-bottom: 35px;
+}
+
+.item-name{
+    margin-bottom: 5px;
+    margin-bottom: 3px;
+    font-weight:bold ;
+    font-size: 16px;
+}
+
+.item-name span{
+    font-size: 15px;
+    color: red;
+    margin-left: 2px;
+}
+
+.title-new{
+    margin-bottom: 20px;
+}
+
+.title-new input{
+    width: 98%;
+    padding:5px 0;
+}
+
+.created-date-form{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.created_date input{
+    padding:5px 0;
+}
+
+.rating-container{
+    margin-top: 50px;
+}
+
+.rating-container textarea{
+    width:98%;
+    padding:15px 0;
+    margin-top: 8px;
+}
+
+.rating-stars{
+    display: flex;
+}
+
+.rating-stars p{
+    float: left;
+}
+
+.rating-stars input{
+    padding:10px;
+}
+
+.rating-form{
+    padding: -5px;
+}
+
+.ingredient-form{
+    text-align: center;
+}
+
+.ingredient-name{
+    margin-bottom: 10px;
+}
+
+.ingredient-form input{
+    width: 46%;
+    margin:0 5px 10px 2px;
+    padding:5px 0;
+}
+
+.ingredient-form p{
+    display: inline;
+}
+
+.direction-form{
+    text-align: center;
+}
+
+.direction-form input{
+    width: 98%;
+    margin:0 5px 10px 2px;
+    padding:5px 0;
+}
+
+.direction-form p{
+    display: inline;
+}
+
+.post-btn{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.post-btn input{
+    padding:5px 20px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: rgb(194, 194, 194);
+}

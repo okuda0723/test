@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      cooking:
+        title: タイトル
+        image_1: 画像
+        created_date: 作成日
+        rating: 評価
+        comment: コメント
+      cooking/ingredients:
+        ingredient_name: 材料名
+        quantity: 分量
+      cooking/directions:
+        text: レシピ
+
+

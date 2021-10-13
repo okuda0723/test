@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="search">
+        <%= form_tag(posts_search_path,:method => 'get') do %>
+            <%= text_field_tag :search %>
+            <%= submit_tag '検索', :title => nil %>
+        <% end %>
+    </div>
+
+    <div class="main-images list-images">
+        <% @cookings.each do |cooking| %>
+            <%= link_to image_tag(cooking.image_1.url, class:"list-image"), "/posts/#{cooking.id}" %>
+        <% end %>
+    </div>
+    
+</div>

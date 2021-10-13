@@ -1,0 +1,86 @@
+ <% if flash[:notice] %>
+    <div class="flash">
+        <%= flash[:notice] %>
+    </div>
+<% end %>
+
+<div class="posts-image">
+    <%= image_tag @cooking.image_1.url%>
+</div>
+
+<div class="container">
+    <div class="icon-container ">
+    <ul>
+        <li>
+          <a href="https://www.facebook.com/share?" rel="nofollow" target="_blank"><img src="/f_logo.png" class="sns-icon facebook"></a>
+        </li>
+         <li>
+          <a href="https://social-plugins.line.me/lineit/share?" target="_blank"><img src="/line.png" class="sns-icon line"></a>
+        <li>
+          <a href="https://twitter.com/share?" rel="nofollow" target="_blank"><img src="/Twitter.png" class="sns-icon twitter"></a>
+
+        </li>
+
+    </ul>
+    </div>
+
+    <div class="posts-container">
+        <div class="posts-title"><%= @cooking.title %></div>
+        <div class="created_date">作成日：<%= @cooking.created_at.strftime("%Y年 %m月 %d日") %></div>
+    <!-- タグ -->
+    </div>
+
+    <div class="comment-container">
+        <div class="rating-view">
+            <div class="stars">
+            <p>自己評価：</p>
+            <% case @cooking.rating %>
+                <% when 1 %>
+                    <p class="star">★☆☆☆☆</p>
+                <% when 2 %>
+                    <p class="star">★★☆☆☆</p>
+                <% when 3 %>
+                    <p class="star">★★★☆☆</p>
+                <% when 4 %>
+                    <p class="star">★★★★☆</p>
+                <% when 5 %>
+                    <p class="star">★★★★★</p>  
+            <% end %>
+            </div>
+        </div>
+
+        <div class="comment"><%= safe_join(@cooking.comment.split("\n"),tag(:br)) %></div>
+    </div>
+
+    <div class="ingredient-container">
+        <p>材料</p>
+        <div class="ingredient">
+        <% @cooking.ingredients.each do |ingredient| %>
+        <div class="ingredient-wrapper">
+        <span><%= ingredient.ingredient_name %></span>
+        <span><%= ingredient.quantity %></span>
+        <br>
+        </div>
+        <% end %>
+        </div>
+    </div>
+
+    <div class="direction-container">
+        <p>レシピ</p>
+        <div class="direction">
+        <% @cooking.directions.each do |direction| %>
+        <div class="direction-wrapper">
+        <span><%= direction.text %></span>
+        <br>        
+        </div>
+        <% end %>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <%= button_to "編集", {controller: :posts, action: "edit" }, method: :get, class: "edit-btn" %>
+        <%= button_to "削除", "/posts/#{@cooking.id}/destroy",method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+    </div>
+
+</div>
+
